@@ -1,0 +1,2 @@
+# ubuntu_mysql_install
+ubuntu系统mysql的安装与配置
