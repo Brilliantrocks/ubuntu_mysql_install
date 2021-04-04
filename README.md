@@ -56,4 +56,11 @@ mysql运行检查
 输入指令  
 `systemctl status mysql.service`  
 如下显示则安装成功  
-![mysqlcheck](https://user-images.githubusercontent.com/75117698/113504539-5da3fe80-956b-11eb-9634-fafe31574ace.png)
+![mysqlcheck](https://user-images.githubusercontent.com/75117698/113504539-5da3fe80-956b-11eb-9634-fafe31574ace.png)  
+
+
+
+ERROR 1698 (28000)错误解决方案
+---
+普通权限下出现无法登陆mysql,而root权限下不需密码验证直接登陆的状况。
+原因出自auth_socket插件，详见官方文档[插件式权限认证Pluggable Authentication](https://dev.mysql.com/doc/refman/5.7/en/pluggable-authentication.html)
