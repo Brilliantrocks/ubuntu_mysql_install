@@ -53,7 +53,7 @@ Reload privilege tables now? (Press y|Y for Yes, any other key for No) : Y
 
 mysql运行检查
 ---
-输入指令 
-`systemctl status mysql.service` 
-如下显示则安装成功
+输入指令  
+`systemctl status mysql.service`  
+如下显示则安装成功  
 ![mysqlcheck](https://user-images.githubusercontent.com/75117698/113504539-5da3fe80-956b-11eb-9634-fafe31574ace.png)
