@@ -74,7 +74,7 @@ ERROR 1698 (28000)错误解决方案
 `mysql> update mysql.user set authentication_string=PASSWORD('newPwd'), plugin='mysql_native_password' where user='root';`   
 4刷新权限表  
 `mysql>flush priviledges;`  
-5退出mysql，重启mysql服务  
+5退出mysql 
 `mysql>quit`  
-
+6重启mysql服务  
 `service mysql restart`  
