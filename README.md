@@ -62,5 +62,19 @@ mysql运行检查
 
 ERROR 1698 (28000)错误解决方案
 ---
-普通权限下出现无法登陆mysql,而root权限下不需密码验证直接登陆的状况。
+普通权限下出现无法登陆mysql,而root权限下不需密码验证直接登陆的状况。  
 原因出自auth_socket插件，详见官方文档[插件式权限认证Pluggable Authentication](https://dev.mysql.com/doc/refman/5.7/en/pluggable-authentication.html)
+不需要使用该功能时的解决方案如下
+1进入root权限
+`sudo -i`
+2插件式权限认证登陆
+`mysql`
+3进入mysql数据库，修改root认证字符串为密码并设置，插件值为mysql原生密码
+`mysql>use mysql;`
+`mysql> update mysql.user set authentication_string=PASSWORD('newPwd'), plugin='mysql_native_password' where user='root';`  
+4刷新权限表
+`mysql>flush priviledges;`
+5退出mysql，重启mysql服务
+`mysql>quit`  
+
+`service mysql restart`
